@@ -10,6 +10,6 @@ public class JsonPlaceHolderBaseUrl {
     @Before  // "Before" makes the method to be executed befare every @Test method
     public void setUp(){
         String baseUrl = "https://jsonplaceholder.typicode.com";
-        spec = new RequestSpecBuilder().setBaseUri(baseUrl).build();
+        spec = new RequestSpecBuilder().setContentType(ContentType.JSON).setBaseUri(baseUrl).build();
     }
 }

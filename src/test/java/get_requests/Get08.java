@@ -59,7 +59,15 @@ Then
         // Print all titles whose ids are less than 5
         List<String> titleList = json.getList("findAll{it.id<5}.title");
         System.out.println(titleList);
+
+        //Asagida titlenin icerdigi cumleyi belirtmek icin nasil esitlik kullandigimizi gostermek istedim..
+        List<Integer> idWhichHasFugiat = json.getList("findAll{it.titles=='fugiat veniam minus'}.id");
+        System.out.println(json.getList("findAll{it.title=='fugiat veniam minus'}.id"));
+
+        System.out.println("==============");
         // Assert that "delectus aut autem" is one of the titles whose id is less than 5
         assertTrue(titleList.contains("delectus aut autem"));
+
+
     }
 }

@@ -40,13 +40,15 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
 
         //Set expected Data
         Map<String, Object> payLoad = jsonPlaceHolderMapper(null,"Read the books",null);
+        Map<String,Object> expectedData = jsonPlaceHolderMapper(10,"Read the books",true);
+
         System.out.println("payLoad = " + payLoad);
 
         //Send a request and get the response
         Response response = given(spec).body(payLoad).when().patch("{first}/{second}"); //burda map oldugundan ve dependecy de bizim json-datablind oldugundan seriazaliton yapiyor
         response.prettyPrint();
-        payLoad.put("userId",10);
-        payLoad.put("completed",true);
+//        payLoad.put("userId",10);      //bunlari requesten sonra eklemen lazim.Bunlari dedigim kisim patch yaparken degistirmedigin veriler.Veya bunun yerine expectedData mapi olusturcaksin
+//        payLoad.put("completed",true);  //bunlari requesten sonra eklemen lazim.Bunlari dedigim kisim patch yaparken degistirmedigin veriler.Veya bunun yerine expectedData mapi olusturcaksin
 
         //Do Assertions
 //        JsonPath json = response.jsonPath();
@@ -54,9 +56,9 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
 
         Map<String ,Object> actualData = response.as(HashMap.class); // De-Seriazalitation process happening here
         assertEquals(200,response.statusCode());
-        assertEquals(payLoad.get("userId"),actualData.get("userId"));
-        assertEquals(payLoad.get("title"),actualData.get("title"));
-        assertEquals(payLoad.get("completed"),actualData.get("completed"));
+        assertEquals(expectedData.get("userId"),actualData.get("userId"));
+        assertEquals(expectedData.get("title"),actualData.get("title"));
+        assertEquals(expectedData.get("completed"),actualData.get("completed"));
 
 
 

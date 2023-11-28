@@ -10,6 +10,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static test_data.JsonPlaceHolderTestData.jsonPlaceHolderMapper;
 
 public class Put01 extends JsonPlaceHolderBaseUrl {
 
@@ -40,7 +41,7 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
         spec.pathParams("first", "todos", "second",198);
 
 //      ii) Set the Expected Data
-        Map<String, Object> payLoad = JsonPlaceHolderTestData.jsonPlaceHolderMapper(21,"Wash the dishes",false);
+        Map<String, Object> payLoad = jsonPlaceHolderMapper(21,"Wash the dishes",false);
 
         //Send a request and get the response
         Response response = given(spec).body(payLoad).when().put("{first}/{second}");

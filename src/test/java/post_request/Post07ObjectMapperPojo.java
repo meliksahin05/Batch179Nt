@@ -63,6 +63,5 @@ public class Post07ObjectMapperPojo extends JsonPlaceHolderBaseUrl {
         assertEquals(payLoad.getUserId(),actualData2.getUserId());
         assertEquals(payLoad.getTitle(),actualData2.getTitle());
         assertEquals(payLoad.getCompleted(),actualData2.getCompleted());
-
     }
 }

@@ -8,6 +8,8 @@ import org.apache.http.client.methods.RequestBuilder;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
+
 public class Get04 extends JsonPlaceHolderBaseUrl {
     /*
         Given
@@ -41,7 +43,7 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 .contentType(ContentType.JSON)
                 //  .body("[0].title",equalTo("delectus aut autem"));  // --> To check Json value from a list of Jsons first write its index.---> "[0].title"
                 .body("title",hasSize(200)
-                        ,"title",hasItem("quis eius est sint explicabo")
+                        ,"title",hasItem("delectus aut autem")
                         ,"userId",hasItems(2,7,9));
         /*
             When we have response in Collection, we can:
@@ -49,6 +51,8 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 ii) check if an element exists in the collection by hasItem() method,
                 iii) check if multiple elements exist by hasItems() method,
 
+
          */
+
     }
 }

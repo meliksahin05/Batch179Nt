@@ -15,7 +15,7 @@ public class Get06 extends HerOkuAppBaseUrl {
 
           /*
         Given
-            https://restful-booker.herokuapp.com/booking/20
+            https://restful-booker.herokuapp.com/booking/14
         When
             User send a GET request to the URL
         Then
@@ -42,7 +42,7 @@ public class Get06 extends HerOkuAppBaseUrl {
 
         //i) Set the Url
         spec.pathParams("first","booking"
-                ,"second",1384);
+                ,"second",12);
         //ii) Set the Expected Data
         //iii) Send Request And Get Response
         Response response = given(spec).when().get("{first}/{second}");   //  "{}/{}/{}"

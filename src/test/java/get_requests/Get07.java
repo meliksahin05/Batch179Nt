@@ -67,6 +67,7 @@ public class Get07 extends PetStoreBaseUrl {
         assertEquals("application/json",response.contentType());
         assertEquals("application/json",response.contentType());
         assertEquals("Aldo",json.getString("category.name"));
+        assertEquals(0,json.getInt("category.id"));
         assertEquals("Dog",json.getString("name"));
         assertEquals("Seven",json.getString("tags[0].name"));
         assertEquals("string",json.getString("photoUrls[0]"));

@@ -31,7 +31,6 @@ public class Post04 extends JsonPlaceHolderBaseUrl {
                                     }
      */
 //    @JsonIgnoreProperties(ignoreUnknown = true)  // If data we receive from database has extra attributes this notation will ignore them.
-
     @Test
     public void post() {
         // Set Url

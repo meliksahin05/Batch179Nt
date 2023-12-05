@@ -76,5 +76,7 @@ public class Get09 extends HerOkuAppBaseUrl {
                 .body("bookingdates.checkin",is(bookingDatesMap.get("checkin")),
                         "bookingdates.checkout",equalTo(bookingDatesMap.get("checkout")));
 
+
+
     }
 }

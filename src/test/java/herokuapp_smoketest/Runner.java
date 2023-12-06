@@ -9,7 +9,8 @@ import org.junit.runners.Suite;
 
         C01PutBooking.class,
         C02GetBooking.class,
-        C03UpdateBooking.class
+        C03UpdateBooking.class,
+        C04PartiallyUpdateBooking.class
 
 })
 public class Runner {

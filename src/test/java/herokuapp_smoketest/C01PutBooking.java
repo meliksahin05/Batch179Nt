@@ -55,6 +55,7 @@ public class C01PutBooking extends HerOkuAppBaseUrl {
 
      */
 
+
     @Test
     public void post(){
 

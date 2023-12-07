@@ -9,7 +9,7 @@ import pojos.HerokuPojo;
 import java.util.HashMap;
 import java.util.Map;
 
-import static herokuapp_smoketest.C01PutBooking.bookingId;
+import static herokuapp_smoketest.C01CreateBooking.bookingId;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static test_data.HerokuAppTestData.bookingDatesMapper;

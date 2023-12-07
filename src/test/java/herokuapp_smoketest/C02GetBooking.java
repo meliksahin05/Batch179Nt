@@ -6,7 +6,7 @@ import org.junit.Test;
 import pojos.BookingDatesPojo;
 import pojos.HerokuPojo;
 
-import static herokuapp_smoketest.C01PutBooking.bookingId;
+import static herokuapp_smoketest.C01CreateBooking.bookingId;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static utils.ObjectMapperUtils.convertJsonToJava;

@@ -1,7 +1,6 @@
 package herokuapp_smoketest;
 
 import base_urls.HerOkuAppBaseUrl;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 import pojos.BookingDatesPojo;
@@ -12,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static utils.ObjectMapperUtils.convertJsonToJava;
 
-public class C01PutBooking extends HerOkuAppBaseUrl {
+public class C01CreateBooking extends HerOkuAppBaseUrl {
 
 
     public static int bookingId;
